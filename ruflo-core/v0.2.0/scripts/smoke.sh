@@ -20,12 +20,12 @@ else
   [[ -z "$miss" ]] && ok || bad "missing keywords:$miss"
 fi
 
-step "2. .mcp.json registers a 'ruflo' MCP server"
+step "2. .mcp.json registers a 'claude-flow' MCP server"
 F="$ROOT/.mcp.json"
-if [[ -f "$F" ]] && grep -q '"ruflo"' "$F" && grep -q '"command"' "$F"; then
+if [[ -f "$F" ]] && grep -q '"claude-flow"' "$F" && grep -q '"command"' "$F"; then
   ok
 else
-  bad ".mcp.json missing or no ruflo server registration"
+  bad ".mcp.json missing or no claude-flow server registration"
 fi
 
 step "3. all 3 agents present with valid frontmatter"
@@ -71,10 +71,10 @@ grep -qE "3-gate|3 gates|three gates" "$F" || miss="$miss 3-gate"
 grep -qE "4-step|4 step" "$F" || miss="$miss 4-step"
 [[ -z "$miss" ]] && ok || bad "missing cross-references:$miss"
 
-step "8. ADR-0001 exists with status Proposed"
+step "8. ADR-0001 exists with status Accepted"
 ADR="$ROOT/docs/adrs/0001-core-contract.md"
-[[ -f "$ADR" ]] && grep -qE "^status:[[:space:]]*Proposed" "$ADR" \
-  && ok || bad "ADR missing or status != Proposed"
+[[ -f "$ADR" ]] && grep -qE "^status:[[:space:]]*Accepted" "$ADR" \
+  && ok || bad "ADR missing or status != Accepted"
 
 step "9. /ruflo-status command invokes doctor + status"
 F="$ROOT/commands/ruflo-status.md"
