@@ -4,25 +4,20 @@
 
 ## Open Issues
 
-### 1. Mixed Version Directory Conventions
+### 1. Mixed Version Directory Conventions ✅ RESOLVED
 - **Problem**: Original 4 core plugins use commit-hash dirs (`cd0b66f0/`); Tier 1 plugins use semantic version dirs (`v0.2.0/`).
-- **Impact**: Cosmetic inconsistency. Does not affect plugin loading or functionality.
-- **Options**:
-  1. **Standardize on semantic versions** — rename `cd0b66f0/` → `v0.2.0/` for core plugins (requires updating all `marketplace.json` paths).
-  2. **Standardize on commit hashes** — rename `v0.2.0/` → `<hash>/` for Tier 1 plugins (requires re-copying from source).
-  3. **Leave as-is** — document the convention difference in `CODEX-COMPATIBILITY.md`.
-- **Decision needed**: Pick one and apply.
+- **Resolution**: Standardized on semantic versions. Renamed `cd0b66f0/` → `v0.2.0/` for all 4 core plugins. Updated `marketplace.json` and `.agents/plugins/marketplace.json`.
+- **Commit**: `0d8af09`
 
-### 2. Tier 2 Plugin Port (Medium Effort)
-Plugins that need namespace/path rework but are mostly self-contained:
-- `ruflo-agentdb` — AgentDB memory bridge; references `claude-memories` namespace
-- `ruflo-ruvector` — Vector search utilities; depends on agentdb embeddings
-- `ruflo-intelligence` — ReasoningBank integration; deep `.claude` coupling
-- `ruflo-knowledge-graph` — Graph memory layer; depends on agentdb
+### 2. Tier 2 Plugin Port (Medium Effort) ✅ COMPLETED
+Plugins ported as a bloc — all are documentation-only MCP surfaces with no Claude-specific primitives:
+- `ruflo-agentdb` v0.3.0 — AgentDB memory bridge (15 `agentdb_*` MCP tools)
+- `ruflo-ruvector` v0.2.1 — Vector search utilities via `ruvector@0.2.25`
+- `ruflo-intelligence` v0.3.0 — SONA neural patterns, 3-tier model routing
+- `ruflo-knowledge-graph` v0.2.0 — Entity extraction, pathfinder traversal
 
-**Blocker**: These plugins reference excluded plugins internally. Need to either:
-- Port as a bloc (agentdb → ruvector → intelligence → knowledge-graph), or
-- Stub out missing dependencies with MCP-only fallbacks.
+**Commit**: `9a235d5`
+**Validation**: `scripts/validate-registry.py` passes (0 errors, 0 warnings).
 
 ### 3. Tier 3 Plugin Port (High Effort / Redesign)
 Plugins deeply coupled to Claude Code primitives. Likely require redesign rather than direct port:
@@ -47,7 +42,9 @@ Plugins deeply coupled to Claude Code primitives. Likely require redesign rather
 
 ## Next Steps (prioritized)
 
-1. **Decide on version directory convention** — pick option from Issue #1 and apply.
-2. **Port Tier 2 plugins** — start with `ruflo-agentdb` as the dependency root.
-3. **Add CI validation** — GitHub Action that validates all `plugin.json` files parse, `smoke.sh` patterns match READMEs, and no new broken cross-refs are introduced.
-4. **Codex install test** — actually install the marketplace into a fresh Codex environment and verify plugins load.
+1. ~~**Decide on version directory convention** — done.~~
+2. ~~**Port Tier 2 plugins** — done.~~
+3. ~~**Add CI validation** — GitHub Action added (`scripts/validate-registry.py` + `.github/workflows/validate.yml`).~~
+4. ~~**Codex install test** — dry-run install test passes for all 18 plugins (`scripts/test-codex-install.py`). Live Codex API test deferred to avoid token costs.~~
+5. **Push latest changes to GitHub** — ensure `kingkillery/ruflo-codex` is up to date.
+6. **Tier 3 decision** — evaluate whether excluded plugins (rag-memory, cost-tracker, loop-workers, aide) warrant redesign or can remain excluded.

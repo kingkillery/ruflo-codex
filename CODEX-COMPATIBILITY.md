@@ -10,7 +10,7 @@ The Claude tree contains a large Claude Code-native surface: many agents, slash 
 
 ## Current Codex Scope
 
-The Codex cache exposes 14 plugins:
+The Codex cache exposes 18 plugins:
 
 **Core (4)**
 - `ruflo-core`: MCP server configuration, hooks, core discovery/init/doctor skills, and generalist guidance.
@@ -29,6 +29,12 @@ The Codex cache exposes 14 plugins:
 - `ruflo-sparc`: SPARC methodology (Spec-Pseudocode-Architecture-Refinement-Completion).
 - `ruflo-migrations`: Database schema migrations, up/down pairs, dry-run.
 - `ruflo-workflows`: Repeatable multi-step processes, parallel execution.
+
+**Tier 2 — substrate plugins, documentation-only MCP surfaces (4)**
+- `ruflo-agentdb`: AgentDB memory bridge (15 `agentdb_*` MCP tools), HNSW vector search, RaBitQ quantization.
+- `ruflo-ruvector`: Self-learning vector database via `ruvector@0.2.25` — HNSW, adaptive LoRA, code-graph clustering.
+- `ruflo-intelligence`: SONA neural patterns, 3-tier model routing, IPFS cross-project pattern transfer.
+- `ruflo-knowledge-graph`: Entity extraction, relation mapping, pathfinder graph traversal.
 
 Ruflo coordinates state and memory. Codex remains responsible for writing code, running commands, editing files, and deciding when to use Codex subagents.
 
