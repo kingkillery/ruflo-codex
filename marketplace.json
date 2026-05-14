@@ -1,56 +1,176 @@
 {
-  "name": "ruflo",
-  "interface": {
-    "displayName": "Ruflo"
-  },
-  "plugins": [
-    {
-      "name": "ruflo-core",
-      "source": {
-        "source": "local",
-        "path": "./ruflo-core/cd0b66f0"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_USE"
-      },
-      "category": "Coding"
-    },
-    {
-      "name": "ruflo-swarm",
-      "source": {
-        "source": "local",
-        "path": "./ruflo-swarm/cd0b66f0"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_USE"
-      },
-      "category": "Coding"
-    },
-    {
-      "name": "ruflo-autopilot",
-      "source": {
-        "source": "local",
-        "path": "./ruflo-autopilot/cd0b66f0"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_USE"
-      },
-      "category": "Coding"
-    },
-    {
-      "name": "ruflo-federation",
-      "source": {
-        "source": "local",
-        "path": "./ruflo-federation/cd0b66f0"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_USE"
-      },
-      "category": "Coding"
-    }
-  ]
+    "name":  "ruflo",
+    "interface":  {
+                      "displayName":  "Ruflo"
+                  },
+    "plugins":  [
+                    {
+                        "name":  "ruflo-core",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-core/cd0b66f0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-swarm",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-swarm/cd0b66f0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-autopilot",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-autopilot/cd0b66f0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-federation",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-federation/cd0b66f0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-browser",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-browser/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-testgen",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-testgen/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-security-audit",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-security-audit/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-aidefence",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-aidefence/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-docs",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-docs/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-adr",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-adr/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-jujutsu",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-jujutsu/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-sparc",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-sparc/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-migrations",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-migrations/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    },
+                    {
+                        "name":  "ruflo-workflows",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./ruflo-workflows/v0.2.0"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_USE"
+                                   },
+                        "category":  "Coding"
+                    }
+                ]
 }

@@ -1,0 +1,45 @@
+{
+    "name":  "ruflo-adr",
+    "version":  "0.3.0",
+    "description":  "ADR lifecycle management — create, index, supersede, check compliance, and link Architecture Decision Records to code via AgentDB hierarchical store + causal edges (supersedes/amends/depends-on/related)",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "adr",
+                     "architecture",
+                     "decisions",
+                     "documentation",
+                     "lifecycle",
+                     "compliance",
+                     "causal-graph",
+                     "mcp"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo adr",
+                      "shortDescription":  "ADR lifecycle management — create, index, supersede, check compliance, and link Architecture Decision Records to code via AgentDB hierarchical store + causal edges (supersedes/amends/depends-on/related)",
+                      "longDescription":  "ADR lifecycle management — create, index, supersede, check compliance, and link Architecture Decision Records to code via AgentDB hierarchical store + causal edges (supersedes/amends/depends-on/related)",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use ruflo-adr to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

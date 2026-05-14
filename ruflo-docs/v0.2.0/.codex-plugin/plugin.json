@@ -1,0 +1,43 @@
+{
+    "name":  "ruflo-docs",
+    "version":  "0.2.0",
+    "description":  "Documentation generation, API docs (JSDoc/TSDoc/OpenAPI), and drift detection â€” drives the `document` background worker via hooks_worker-dispatch; uses Haiku model for cost-efficient docs work",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "documentation",
+                     "api-docs",
+                     "drift-detection",
+                     "jsdoc",
+                     "openapi",
+                     "mcp"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo docs",
+                      "shortDescription":  "Documentation generation, API docs (JSDoc/TSDoc/OpenAPI), and drift detection â€” drives the `document` background worker via hooks_worker-dispatch; uses Haiku model for cost-efficient docs work",
+                      "longDescription":  "Documentation generation, API docs (JSDoc/TSDoc/OpenAPI), and drift detection â€” drives the `document` background worker via hooks_worker-dispatch; uses Haiku model for cost-efficient docs work",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use ruflo-docs to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

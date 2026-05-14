@@ -1,0 +1,45 @@
+{
+    "name":  "ruflo-aidefence",
+    "version":  "0.2.0",
+    "description":  "AI safety scanning, PII detection, prompt injection defense, and adaptive threat learning",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "aidefence",
+                     "safety",
+                     "pii",
+                     "injection",
+                     "security",
+                     "prompt-injection",
+                     "defense-in-depth",
+                     "mcp"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo aidefence",
+                      "shortDescription":  "AI safety scanning, PII detection, prompt injection defense, and adaptive threat learning",
+                      "longDescription":  "AI safety scanning, PII detection, prompt injection defense, and adaptive threat learning",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use ruflo-aidefence to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

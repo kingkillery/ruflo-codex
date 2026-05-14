@@ -1,0 +1,45 @@
+{
+    "name":  "ruflo-sparc",
+    "version":  "0.2.0",
+    "description":  "SPARC methodology â€” Specification, Pseudocode, Architecture, Refinement, Completion phases with gate checks",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "sparc",
+                     "methodology",
+                     "specification",
+                     "architecture",
+                     "refinement",
+                     "mcp",
+                     "phase-gates",
+                     "quality-gates"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo sparc",
+                      "shortDescription":  "SPARC methodology â€” Specification, Pseudocode, Architecture, Refinement, Completion phases with gate checks",
+                      "longDescription":  "SPARC methodology â€” Specification, Pseudocode, Architecture, Refinement, Completion phases with gate checks",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use ruflo-sparc to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

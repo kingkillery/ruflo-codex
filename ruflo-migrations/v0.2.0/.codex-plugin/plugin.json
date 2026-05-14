@@ -1,0 +1,44 @@
+{
+    "name":  "ruflo-migrations",
+    "version":  "0.2.0",
+    "description":  "Schema migration management â€” generate, validate, dry-run, and rollback database migrations",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "migrations",
+                     "database",
+                     "schema",
+                     "rollback",
+                     "mcp",
+                     "dry-run",
+                     "up-down-pairs"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo migrations",
+                      "shortDescription":  "Schema migration management â€” generate, validate, dry-run, and rollback database migrations",
+                      "longDescription":  "Schema migration management â€” generate, validate, dry-run, and rollback database migrations",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use ruflo-migrations to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

@@ -1,0 +1,45 @@
+{
+    "name":  "ruflo-workflows",
+    "version":  "0.2.0",
+    "description":  "Workflow automation with templates, orchestration, and lifecycle management â€” wraps 10 workflow_* MCP tools (create/run/execute/status/list/pause/resume/cancel/delete/template) with full state-machine lifecycle (created â†’ running â†” paused â†’ completed/cancelled)",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "workflows",
+                     "automation",
+                     "orchestration",
+                     "templates",
+                     "mcp",
+                     "workflow-templates",
+                     "pause-resume",
+                     "lifecycle"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo workflows",
+                      "shortDescription":  "Workflow automation with templates, orchestration, and lifecycle management â€” wraps 10 workflow_* MCP tools (create/run/execute/status/list/pause/resume/cancel/delete/template) with full state-machine lifecycle (created â†’ running â†” paused â†’ completed/cancelled)",
+                      "longDescription":  "Workflow automation with templates, orchestration, and lifecycle management â€” wraps 10 workflow_* MCP tools (create/run/execute/status/list/pause/resume/cancel/delete/template) with full state-machine lifecycle (created â†’ running â†” paused â†’ completed/cancelled)",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use ruflo-workflows to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

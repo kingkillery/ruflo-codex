@@ -1,0 +1,44 @@
+{
+    "name":  "ruflo-testgen",
+    "version":  "0.2.0",
+    "description":  "Test gap detection, coverage analysis, and automated test generation â€” drives the testgaps background worker via hooks_worker-dispatch; SPARC Refinement-phase canonical owner",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "testing",
+                     "tdd",
+                     "coverage",
+                     "test-generation",
+                     "mcp",
+                     "tdd-london-school",
+                     "coverage-routing"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo testgen",
+                      "shortDescription":  "Test gap detection, coverage analysis, and automated test generation â€” drives the testgaps background worker via hooks_worker-dispatch; SPARC Refinement-phase canonical owner",
+                      "longDescription":  "Test gap detection, coverage analysis, and automated test generation â€” drives the testgaps background worker via hooks_worker-dispatch; SPARC Refinement-phase canonical owner",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use ruflo-testgen to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}
