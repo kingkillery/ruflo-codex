@@ -1,0 +1,47 @@
+{
+    "name": "ruflo-intelligence",
+    "version": "0.3.0",
+    "description": "User-facing surface for Ruflo's self-learning system: 6 neural_* + 10 hooks_intelligence_* + 9 routing/meta hooks + 4 SONA/MicroLoRA tools (29 total). Implements the 4-step pipeline (RETRIEVE → JUDGE → DISTILL → CONSOLIDATE) and IPFS-based cross-project pattern transfer.",
+    "author": {
+        "name": "ruvnet",
+        "url": "https://github.com/ruvnet"
+    },
+    "homepage": "https://github.com/ruvnet/ruflo",
+    "repository": "https://github.com/ruvnet/ruflo",
+    "license": "MIT",
+    "keywords": [
+        "ruflo",
+        "intelligence",
+        "sona",
+        "microlora",
+        "neural",
+        "learning",
+        "routing",
+        "ewc",
+        "attention",
+        "moe",
+        "pattern-transfer",
+        "model-routing",
+        "mcp"
+    ],
+    "skills": "./skills/",
+    "interface": {
+        "displayName": "Ruflo Intelligence",
+        "shortDescription": "Self-learning intelligence layer with SONA neural patterns, model routing, and cross-project transfer",
+        "longDescription": "User-facing surface for Ruflo's self-learning system: 6 neural_* + 10 hooks_intelligence_* + 9 routing/meta hooks + 4 SONA/MicroLoRA tools (29 total). Implements the 4-step pipeline (RETRIEVE → JUDGE → DISTILL → CONSOLIDATE) and IPFS-based cross-project pattern transfer.",
+        "developerName": "ruvnet",
+        "category": "Coding",
+        "capabilities": [
+            "Interactive",
+            "Write"
+        ],
+        "websiteURL": "https://github.com/ruvnet/ruflo",
+        "privacyPolicyURL": "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+        "termsOfServiceURL": "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+        "defaultPrompt": [
+            "Use ruflo-intelligence to apply learned patterns and route models for this Codex task"
+        ],
+        "brandColor": "#0F766E",
+        "screenshots": []
+    }
+}

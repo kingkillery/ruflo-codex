@@ -1,0 +1,42 @@
+{
+    "name": "ruflo-knowledge-graph",
+    "version": "0.2.0",
+    "description": "Knowledge graph construction — entity extraction, relation mapping, and pathfinder graph traversal",
+    "author": {
+        "name": "ruvnet",
+        "url": "https://github.com/ruvnet"
+    },
+    "homepage": "https://github.com/ruvnet/ruflo",
+    "repository": "https://github.com/ruvnet/ruflo",
+    "license": "MIT",
+    "keywords": [
+        "ruflo",
+        "knowledge-graph",
+        "entities",
+        "relations",
+        "pathfinder",
+        "mcp",
+        "pathfinder-traversal",
+        "entity-extraction"
+    ],
+    "skills": "./skills/",
+    "interface": {
+        "displayName": "Ruflo Knowledge Graph",
+        "shortDescription": "Construct and traverse knowledge graphs with entity extraction and pathfinder search",
+        "longDescription": "Knowledge graph construction — entity extraction, relation mapping, and pathfinder graph traversal",
+        "developerName": "ruvnet",
+        "category": "Coding",
+        "capabilities": [
+            "Interactive",
+            "Write"
+        ],
+        "websiteURL": "https://github.com/ruvnet/ruflo",
+        "privacyPolicyURL": "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+        "termsOfServiceURL": "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+        "defaultPrompt": [
+            "Use ruflo-knowledge-graph to extract entities and traverse relations for this Codex task"
+        ],
+        "brandColor": "#0F766E",
+        "screenshots": []
+    }
+}

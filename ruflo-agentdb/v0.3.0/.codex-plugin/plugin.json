@@ -1,0 +1,45 @@
+{
+    "name": "ruflo-agentdb",
+    "version": "0.3.0",
+    "description": "Substrate plugin for Ruflo memory: AgentDB controller bridge (15 agentdb_* MCP tools), RuVector ONNX embeddings (10 embeddings_* tools incl. RaBitQ 32x quantization), and WASM HNSW pattern router (3 ruvllm_hnsw_* tools)",
+    "author": {
+        "name": "ruvnet",
+        "url": "https://github.com/ruvnet"
+    },
+    "homepage": "https://github.com/ruvnet/ruflo",
+    "repository": "https://github.com/ruvnet/ruflo",
+    "license": "MIT",
+    "keywords": [
+        "ruflo",
+        "agentdb",
+        "ruvector",
+        "hnsw",
+        "embeddings",
+        "vector-search",
+        "rabitq",
+        "quantization",
+        "namespace-convention",
+        "controller-bridge",
+        "mcp"
+    ],
+    "skills": "./skills/",
+    "interface": {
+        "displayName": "Ruflo AgentDB",
+        "shortDescription": "AgentDB memory bridge with HNSW vector search, RaBitQ quantization, and semantic routing",
+        "longDescription": "Substrate plugin for Ruflo memory: AgentDB controller bridge (15 agentdb_* MCP tools), RuVector ONNX embeddings (10 embeddings_* tools incl. RaBitQ 32x quantization), and WASM HNSW pattern router (3 ruvllm_hnsw_* tools)",
+        "developerName": "ruvnet",
+        "category": "Coding",
+        "capabilities": [
+            "Interactive",
+            "Write"
+        ],
+        "websiteURL": "https://github.com/ruvnet/ruflo",
+        "privacyPolicyURL": "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+        "termsOfServiceURL": "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+        "defaultPrompt": [
+            "Use ruflo-agentdb to manage memory and vector search for this Codex task"
+        ],
+        "brandColor": "#0F766E",
+        "screenshots": []
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "name": "ruflo-ruvector",
+    "version": "0.2.1",
+    "description": "Self-learning vector database via npx ruvector@0.2.25 — HNSW, adaptive LoRA embeddings, code-graph clustering, hooks routing, brain/SONA, 103 MCP tools",
+    "author": {
+        "name": "ruvnet",
+        "url": "https://github.com/ruvnet"
+    },
+    "homepage": "https://github.com/ruvnet/ruvector",
+    "repository": "https://github.com/ruvnet/ruflo",
+    "license": "MIT",
+    "keywords": [
+        "ruflo",
+        "ruvector",
+        "vector-database",
+        "hnsw",
+        "adaptive-lora",
+        "graph-cluster",
+        "hooks",
+        "sona",
+        "brain",
+        "mcp"
+    ],
+    "skills": "./skills/",
+    "interface": {
+        "displayName": "Ruflo RuVector",
+        "shortDescription": "Self-learning vector database with HNSW indexing, adaptive LoRA embeddings, and SONA neural patterns",
+        "longDescription": "Self-learning vector database via npx ruvector@0.2.25 — HNSW, adaptive LoRA embeddings, code-graph clustering, hooks routing, brain/SONA, 103 MCP tools",
+        "developerName": "ruvnet",
+        "category": "Coding",
+        "capabilities": [
+            "Interactive",
+            "Write"
+        ],
+        "websiteURL": "https://github.com/ruvnet/ruvector",
+        "privacyPolicyURL": "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+        "termsOfServiceURL": "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+        "defaultPrompt": [
+            "Use ruflo-ruvector for vector search and embedding tasks in this Codex session"
+        ],
+        "brandColor": "#0F766E",
+        "screenshots": []
+    }
+}
