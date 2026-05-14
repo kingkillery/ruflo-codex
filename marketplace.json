@@ -8,7 +8,7 @@
                         "name":  "ruflo-core",
                         "source":  {
                                        "source":  "local",
-                                       "path":  "./ruflo-core/cd0b66f0"
+                                       "path":  "./ruflo-core/v0.2.0"
                                    },
                         "policy":  {
                                        "installation":  "AVAILABLE",
@@ -20,7 +20,7 @@
                         "name":  "ruflo-swarm",
                         "source":  {
                                        "source":  "local",
-                                       "path":  "./ruflo-swarm/cd0b66f0"
+                                       "path":  "./ruflo-swarm/v0.2.0"
                                    },
                         "policy":  {
                                        "installation":  "AVAILABLE",
@@ -32,7 +32,7 @@
                         "name":  "ruflo-autopilot",
                         "source":  {
                                        "source":  "local",
-                                       "path":  "./ruflo-autopilot/cd0b66f0"
+                                       "path":  "./ruflo-autopilot/v0.2.0"
                                    },
                         "policy":  {
                                        "installation":  "AVAILABLE",
@@ -44,7 +44,7 @@
                         "name":  "ruflo-federation",
                         "source":  {
                                        "source":  "local",
-                                       "path":  "./ruflo-federation/cd0b66f0"
+                                       "path":  "./ruflo-federation/v0.2.0"
                                    },
                         "policy":  {
                                        "installation":  "AVAILABLE",
