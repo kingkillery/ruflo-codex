@@ -1,0 +1,45 @@
+{
+    "name":  "ruflo-autopilot",
+    "version":  "0.2.0",
+    "description":  "Autonomous Codex task-loop support with learning, prediction, and progress tracking: wraps 10 autopilot_* MCP tools (status/enable/disable/config/reset/log/progress/learn/history/predict)",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "autopilot",
+                     "loop",
+                     "autonomous",
+                     "learning",
+                     "prediction",
+                     "progress-tracking",
+                     "cache-aware",
+                     "mcp"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo Autopilot",
+                      "shortDescription":  "Autopilot prediction and progress tracking",
+                      "longDescription":  "Codex-facing autopilot support for bounded task iteration using Ruflo MCP prediction, progress, history, and learning tools. Persistent wakeups require an external scheduler or explicit user continuation.",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use Ruflo autopilot to pick the next bounded Codex action"
+                                        ],
+                      "brandColor":  "#B45309",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

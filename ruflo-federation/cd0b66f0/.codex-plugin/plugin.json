@@ -1,0 +1,50 @@
+{
+    "name":  "ruflo-federation",
+    "version":  "0.2.0",
+    "description":  "Cross-installation agent federation with zero-trust security, peer discovery, consensus-based task routing, and per-call budget circuit breaker (ADR-097)",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "federation",
+                     "zero-trust",
+                     "peer-discovery",
+                     "consensus",
+                     "multi-agent",
+                     "distributed",
+                     "circuit-breaker",
+                     "budget",
+                     "token-quota",
+                     "mcp",
+                     "pii-pipeline",
+                     "audit-log"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo Federation",
+                      "shortDescription":  "Federated agent coordination utilities",
+                      "longDescription":  "Codex-facing federation guidance for cross-installation agent communication, audit, trust, and status workflows using Ruflo federation tooling.",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Read",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Check Ruflo federation status and trust posture"
+                                        ],
+                      "brandColor":  "#7C3AED",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

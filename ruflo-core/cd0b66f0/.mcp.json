@@ -1,0 +1,14 @@
+{
+    "mcpServers":  {
+                       "claude-flow":  {
+                                           "command":  "npx",
+                                           "args":  [
+                                                        "-y",
+                                                        "@claude-flow/cli@latest",
+                                                        "mcp",
+                                                        "start"
+                                                    ],
+                                           "note":  "Ruflo/Claude Flow MCP server for memory, AgentDB, embeddings, hooks, neural, autopilot, agent, and swarm tools."
+                                       }
+                   }
+}

@@ -1,0 +1,178 @@
+{
+    "hooks":  {
+                  "SessionStart":  [
+                                       {
+                                           "hooks":  [
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "python scripts\\ruflo_codex_hook.py --phase session-start",
+                                                             "timeout":  30,
+                                                             "continueOnError":  true
+                                                         }
+                                                     ]
+                                       }
+                                   ],
+                  "UserPromptSubmit":  [
+                                           {
+                                               "hooks":  [
+                                                             {
+                                                                 "type":  "command",
+                                                                 "command":  "python scripts\\ruflo_codex_hook.py --phase user-prompt",
+                                                                 "timeout":  30,
+                                                                 "continueOnError":  true
+                                                             }
+                                                         ]
+                                           }
+                                       ],
+                  "PreToolUse":  [
+                                     {
+                                         "matcher":  "^(Bash|Shell|shell_command|functions\\.shell_command)$",
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "python scripts\\ruflo_codex_hook.py --phase pre",
+                                                           "timeout":  25,
+                                                           "continueOnError":  true
+                                                       }
+                                                   ]
+                                     },
+                                     {
+                                         "matcher":  "^(Write|Edit|MultiEdit|apply_patch)$",
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "python scripts\\ruflo_codex_hook.py --phase pre",
+                                                           "timeout":  25,
+                                                           "continueOnError":  true
+                                                       }
+                                                   ]
+                                     },
+                                     {
+                                         "matcher":  "^(Read|Grep|Glob|rg|.*search.*)$",
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "python scripts\\ruflo_codex_hook.py --phase pre",
+                                                           "timeout":  20,
+                                                           "continueOnError":  true
+                                                       }
+                                                   ]
+                                     },
+                                     {
+                                         "matcher":  "^(spawn_agent|wait_agent|send_input|resume_agent|close_agent|Task|.*agent.*)$",
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "python scripts\\ruflo_codex_hook.py --phase pre",
+                                                           "timeout":  25,
+                                                           "continueOnError":  true
+                                                       }
+                                                   ]
+                                     },
+                                     {
+                                         "matcher":  "^(mcp__claude-flow__.*|mcp__ruflo__.*|.*claude-flow.*|.*ruflo.*)$",
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "python scripts\\ruflo_codex_hook.py --phase pre",
+                                                           "timeout":  25,
+                                                           "continueOnError":  true
+                                                       }
+                                                   ]
+                                     }
+                                 ],
+                  "PostToolUse":  [
+                                      {
+                                          "matcher":  "^(Bash|Shell|shell_command|functions\\.shell_command)$",
+                                          "hooks":  [
+                                                        {
+                                                            "type":  "command",
+                                                            "command":  "python scripts\\ruflo_codex_hook.py --phase post",
+                                                            "timeout":  25,
+                                                            "continueOnError":  true
+                                                        }
+                                                    ]
+                                      },
+                                      {
+                                          "matcher":  "^(Write|Edit|MultiEdit|apply_patch)$",
+                                          "hooks":  [
+                                                        {
+                                                            "type":  "command",
+                                                            "command":  "python scripts\\ruflo_codex_hook.py --phase post",
+                                                            "timeout":  25,
+                                                            "continueOnError":  true
+                                                        }
+                                                    ]
+                                      },
+                                      {
+                                          "matcher":  "^(Read|Grep|Glob|rg|.*search.*)$",
+                                          "hooks":  [
+                                                        {
+                                                            "type":  "command",
+                                                            "command":  "python scripts\\ruflo_codex_hook.py --phase post",
+                                                            "timeout":  20,
+                                                            "continueOnError":  true
+                                                        }
+                                                    ]
+                                      },
+                                      {
+                                          "matcher":  "^(spawn_agent|wait_agent|send_input|resume_agent|close_agent|Task|.*agent.*)$",
+                                          "hooks":  [
+                                                        {
+                                                            "type":  "command",
+                                                            "command":  "python scripts\\ruflo_codex_hook.py --phase post",
+                                                            "timeout":  25,
+                                                            "continueOnError":  true
+                                                        }
+                                                    ]
+                                      },
+                                      {
+                                          "matcher":  "^(mcp__claude-flow__.*|mcp__ruflo__.*|.*claude-flow.*|.*ruflo.*)$",
+                                          "hooks":  [
+                                                        {
+                                                            "type":  "command",
+                                                            "command":  "python scripts\\ruflo_codex_hook.py --phase post",
+                                                            "timeout":  25,
+                                                            "continueOnError":  true
+                                                        }
+                                                    ]
+                                      }
+                                  ],
+                  "PermissionRequest":  [
+                                            {
+                                                "matcher":  "^(mcp__claude-flow__.*|mcp__ruflo__.*)$",
+                                                "hooks":  [
+                                                              {
+                                                                  "type":  "command",
+                                                                  "command":  "python -c \"print(\u0027{\\\"decision\\\":\\\"allow\\\",\\\"reason\\\":\\\"Ruflo/Claude Flow MCP tool auto-approved by plugin policy\\\"}\u0027)\"",
+                                                                  "timeout":  5
+                                                              }
+                                                          ]
+                                            }
+                                        ],
+                  "Notification":  [
+                                       {
+                                           "hooks":  [
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "python scripts\\ruflo_codex_hook.py --phase notification",
+                                                             "timeout":  15,
+                                                             "continueOnError":  true
+                                                         }
+                                                     ]
+                                       }
+                                   ],
+                  "Stop":  [
+                               {
+                                   "hooks":  [
+                                                 {
+                                                     "type":  "command",
+                                                     "command":  "python scripts\\ruflo_codex_hook.py --phase stop",
+                                                     "timeout":  30,
+                                                     "continueOnError":  true
+                                                 }
+                                             ]
+                               }
+                           ]
+              }
+}

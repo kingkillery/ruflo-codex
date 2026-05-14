@@ -1,0 +1,46 @@
+{
+    "name":  "ruflo-core",
+    "version":  "0.2.0",
+    "description":  "Foundation plugin for Codex: registers the ruflo MCP server (300+ tools across memory/agentdb/embeddings/hooks/aidefence/neural/autopilot/browser/agent/swarm), provides 3 generalist agents (coder/researcher/reviewer), 3 first-run skills, and a curated plugin-discovery catalog",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "mcp",
+                     "orchestration",
+                     "codex",
+                     "foundation",
+                     "mcp-server",
+                     "plugin-catalog",
+                     "discovery"
+                 ],
+    "skills":  "./skills/",
+    "mcpServers":  "./.mcp.json",
+    "interface":  {
+                      "displayName":  "Ruflo Core",
+                      "shortDescription":  "Ruflo MCP, memory, hooks, and discovery",
+                      "longDescription":  "Foundation plugin for Codex that bundles the Ruflo/Claude Flow MCP server configuration, Codex-compatible hooks, curated core skills, and generalist agent guidance. Ruflo coordinates and records state; Codex still executes code and commands.",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Read",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Use Ruflo memory and hooks to coordinate this Codex task"
+                                        ],
+                      "brandColor":  "#0F766E",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}

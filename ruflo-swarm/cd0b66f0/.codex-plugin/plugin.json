@@ -1,0 +1,45 @@
+{
+    "name":  "ruflo-swarm",
+    "version":  "0.2.0",
+    "description":  "Agent teams, swarm coordination, monitor streams, and worktree isolation for Codex: wraps 4 swarm_* + 8 agent_* MCP tools (12 total) plus 6 topologies (hierarchical / mesh / hierarchical-mesh / ring / star / adaptive)",
+    "author":  {
+                   "name":  "ruvnet",
+                   "url":  "https://github.com/ruvnet"
+               },
+    "homepage":  "https://github.com/ruvnet/ruflo",
+    "repository":  "https://github.com/ruvnet/ruflo",
+    "license":  "MIT",
+    "keywords":  [
+                     "ruflo",
+                     "swarm",
+                     "agents",
+                     "teams",
+                     "monitor",
+                     "mcp",
+                     "topologies",
+                     "worktree-isolation",
+                     "monitor-stream"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Ruflo Swarm",
+                      "shortDescription":  "Swarm coordination patterns for Codex",
+                      "longDescription":  "Codex-facing swarm coordination guidance built around Ruflo MCP swarm and agent state. Use for multi-file work, coordination records, and bounded Codex subagent delegation when explicitly requested.",
+                      "developerName":  "ruvnet",
+                      "category":  "Coding",
+                      "capabilities":  [
+                                           "Interactive",
+                                           "Write"
+                                       ],
+                      "websiteURL":  "https://github.com/ruvnet/ruflo",
+                      "privacyPolicyURL":  "https://github.com/ruvnet/ruflo/blob/main/SECURITY.md",
+                      "termsOfServiceURL":  "https://github.com/ruvnet/ruflo/blob/main/LICENSE",
+                      "defaultPrompt":  [
+                                            "Initialize a Ruflo swarm and coordinate this multi-file task"
+                                        ],
+                      "brandColor":  "#1D4ED8",
+                      "screenshots":  [
+
+                                      ]
+                  }
+}
