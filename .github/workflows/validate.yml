@@ -1,0 +1,36 @@
+name: Validate Ruflo-Codex Registry
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate plugin registry
+        run: python scripts/validate-registry.py
+
+      - name: Check JSON formatting
+        run: |
+          python -c "
+          import json, glob, sys
+          ok = True
+          for f in glob.glob('**/*.json', recursive=True):
+              try:
+                  with open(f, encoding='utf-8') as fh:
+                      json.load(fh)
+              except Exception as e:
+                  print(f'INVALID JSON: {f} -> {e}')
+                  ok = False
+          sys.exit(0 if ok else 1)
+          "
