@@ -46,5 +46,6 @@ Plugins deeply coupled to Claude Code primitives. Likely require redesign rather
 2. ~~**Port Tier 2 plugins** — done.~~
 3. ~~**Add CI validation** — GitHub Action added (`scripts/validate-registry.py` + `.github/workflows/validate.yml`).~~
 4. ~~**Codex install test** — dry-run install test passes for all 18 plugins (`scripts/test-codex-install.py`). Live Codex API test deferred to avoid token costs.~~
-5. **Push latest changes to GitHub** — ensure `kingkillery/ruflo-codex` is up to date.
+5. ~~**Push latest changes to GitHub** — done (`0b0864b`).~~
 6. **Tier 3 decision** — evaluate whether excluded plugins (rag-memory, cost-tracker, loop-workers, aide) warrant redesign or can remain excluded.
+7. ~~**Structural gaps** — marketplace.json `version` added; ruflo-core ADR status updated to Accepted; all smoke.sh files normalized to LF; ruflo-core smoke.sh passes 10/10.~~
