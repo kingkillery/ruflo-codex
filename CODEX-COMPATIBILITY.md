@@ -4,18 +4,31 @@ This Codex marketplace cache is intentionally a curated Ruflo subset, not a full
 
 ## Decision
 
-Do not bulk-port the full `C:\Users\prest\.claude\plugins\marketplaces\ruflo\.claude` tree into Codex skills by default.
+Do not bulk-port the full `.claude` content tree from the original ruflo repository into Codex skills by default.
 
 The Claude tree contains a large Claude Code-native surface: many agents, slash commands, hook prompts, and workflow assumptions that rely on Claude-only primitives. Importing it wholesale would create noisy or misleading Codex instructions unless each item is reviewed and translated.
 
 ## Current Codex Scope
 
-The Codex cache exposes four focused plugins:
+The Codex cache exposes 14 plugins:
 
+**Core (4)**
 - `ruflo-core`: MCP server configuration, hooks, core discovery/init/doctor skills, and generalist guidance.
 - `ruflo-swarm`: Codex-safe swarm coordination patterns.
 - `ruflo-autopilot`: bounded autopilot prediction, progress, and learning guidance.
 - `ruflo-federation`: federation status, init, and audit workflows.
+
+**Tier 1 — high-value, low Claude-coupling (10)**
+- `ruflo-browser`: Playwright automation (navigate, click, screenshot, scrape).
+- `ruflo-testgen`: TDD workflow, test gap detection, coverage routing.
+- `ruflo-security-audit`: CVE scanning, dependency checks, static analysis.
+- `ruflo-aidefence`: PII detection, prompt-injection defense, sanitization.
+- `ruflo-docs`: Doc generation, drift detection, API docs.
+- `ruflo-adr`: Architecture decision records, code-to-ADR linking.
+- `ruflo-jujutsu`: Diff risk scoring, PR review, git workflow.
+- `ruflo-sparc`: SPARC methodology (Spec-Pseudocode-Architecture-Refinement-Completion).
+- `ruflo-migrations`: Database schema migrations, up/down pairs, dry-run.
+- `ruflo-workflows`: Repeatable multi-step processes, parallel execution.
 
 Ruflo coordinates state and memory. Codex remains responsible for writing code, running commands, editing files, and deciding when to use Codex subagents.
 

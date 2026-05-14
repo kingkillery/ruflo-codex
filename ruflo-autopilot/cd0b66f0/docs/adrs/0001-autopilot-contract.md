@@ -10,7 +10,7 @@ tags: [plugin, autopilot, loop, learning, mcp, smoke-test]
 
 ## Context
 
-`ruflo-autopilot` wraps the 10 `autopilot_*` MCP tools at `v3/@claude-flow/cli/src/mcp-tools/autopilot-tools.ts:27, 49, 65, 79, 107, 124, 141, 168, 186, 212` (`status`, `enable`, `disable`, `config`, `reset`, `log`, `progress`, `learn`, `history`, `predict`). Plugin is at v0.1.0 with two skills + two commands, integrates with Claude Code's native `/loop` + `ScheduleWakeup` (270s default to keep the prompt cache warm).
+`ruflo-autopilot` wraps the 10 `autopilot_*` MCP tools at `v3/@claude-flow/cli/src/mcp-tools/autopilot-tools.ts:27, 49, 65, 79, 107, 124, 141, 168, 186, 212` (`status`, `enable`, `disable`, `config`, `reset`, `log`, `progress`, `learn`, `history`, `predict`). Plugin is at v0.1.0 with two skills + two commands. Original Claude Code version integrates with `/loop` + `ScheduleWakeup` (270s default to keep the prompt cache warm). **Codex port:** `ScheduleWakeup` removed; bounded iteration model replaces persistent wake loops.
 
 Surface count is correct (the plugin claims "10 autopilot MCP tools" and the source confirms 10). What's missing is the contract pattern every other plugin updated this session has adopted.
 
@@ -19,11 +19,11 @@ Surface count is correct (the plugin claims "10 autopilot MCP tools" and the sou
 1. Add this ADR (Proposed).
 2. README augment with Compatibility (pin v3.6), Namespace coordination (defers to ruflo-agentdb ADR-0001 §"Namespace convention"; claims `autopilot-patterns` as the owned namespace), Verification + Architecture Decisions sections. Cross-reference to Claude Code's `/loop` skill semantics.
 3. Bump `0.1.0 → 0.2.0`. Keywords add `prediction`, `progress-tracking`, `cache-aware`, `mcp`.
-4. `scripts/smoke.sh` — 10 structural checks: version + keywords; all 10 `autopilot_*` tools referenced; both skills present with valid frontmatter; both commands present (`/autopilot`, `/autopilot-status`); README pins to v3.6; namespace coordination block; ScheduleWakeup 270s cache-aware note retained; ADR Proposed; no wildcard tools; agent file references `autopilot-patterns`.
+4. `scripts/smoke.sh` — 10 structural checks: version + keywords; all 10 `autopilot_*` tools referenced; both skills present with valid frontmatter; both commands present (`/autopilot`, `/autopilot-status`); README pins to v3.6; namespace coordination block; bounded iteration note replaces ScheduleWakeup; ADR Proposed; no wildcard tools; agent file references `autopilot-patterns`.
 
 ## Consequences
 
-**Positive:** plugin joins the cadence. The cache-aware 270s ScheduleWakeup pattern is now contractually documented (every other plugin's loop guidance can reference it).
+**Positive:** plugin joins the cadence. Bounded iteration is documented for Codex compatibility. Original cache-aware 270s ScheduleWakeup pattern remains in upstream ruflo repo for Claude Code.
 
 **Negative:** none material — plugin behavior unchanged.
 

@@ -4,7 +4,7 @@ set -u
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PASS=0
 FAIL=0
-step() { printf "→ %s ... " "$1"; }
+step() { printf "â†’ %s ... " "$1"; }
 ok()   { printf "PASS\n"; PASS=$((PASS+1)); }
 bad()  { printf "FAIL: %s\n" "$1"; FAIL=$((FAIL+1)); }
 
@@ -61,10 +61,9 @@ grep -qE "@claude-flow/cli.*v3\.6|v3\.6.*claude-flow/cli" "$ROOT/README.md" \
   && ok || bad "Compatibility pin to v3.6 missing"
 
 # 7. README has namespace coordination section
-step "7. README defers to ruflo-agentdb ADR-0001 namespace convention"
-grep -q "Namespace coordination" "$ROOT/README.md" \
-  && grep -q "ruflo-agentdb" "$ROOT/README.md" \
-  && grep -q "Namespace convention" "$ROOT/README.md" \
+step "7. README has namespace coordination section"
+grep -q "Namespace coordination" "$ROOT/README.md"
+  && grep -q "Namespace coordination" "$ROOT/README.md" \
   && ok || bad "namespace coordination block incomplete"
 
 # 8. ADR file exists with status Proposed

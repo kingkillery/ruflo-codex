@@ -33,7 +33,7 @@ All defined at `v3/@claude-flow/cli/src/mcp-tools/analyze-tools.ts`:
 |------|---------|
 | `analyze_diff` | Full diff analysis (risk + classification + reviewers + stats) |
 | `analyze_diff-risk` | Risk score for the staged/unstaged diff |
-| `analyze_diff-classify` | Classify change as feature, bugfix, refactor, perf, security, docs, …|
+| `analyze_diff-classify` | Classify change as feature, bugfix, refactor, perf, security, docs, â€¦|
 | `analyze_diff-reviewers` | Recommend reviewers based on code ownership |
 | `analyze_file-risk` | Per-file risk breakdown |
 | `analyze_diff-stats` | Lines added/removed, files touched, complexity delta |
@@ -52,11 +52,11 @@ This plugin's diff analysis is the substrate that [ruflo-adr ADR-0001](../ruflo-
 3. Then cross-references the `adr-patterns` namespace for ADRs related to the touched files
 4. Flags violations: code referencing deprecated/superseded ADRs, or code contradicting accepted ADRs
 
-Without this plugin, `/adr check` falls back to plain `git diff` parsing — usable but no risk scoring or reviewer recommendations.
+Without this plugin, `/adr check` falls back to plain `git diff` parsing â€” usable but no risk scoring or reviewer recommendations.
 
 ## Namespace coordination
 
-This plugin owns the `git-patterns` AgentDB namespace (kebab-case, follows the convention from [ruflo-agentdb ADR-0001 §"Namespace convention"](../ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md)). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
+This plugin owns the `git-patterns` AgentDB namespace (kebab-case, follows the convention from ruflo-agentdb namespace convention (original ruflo repo)). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
 
 ## Verification
 
@@ -67,9 +67,9 @@ bash plugins/ruflo-jujutsu/scripts/smoke.sh
 
 ## Architecture Decisions
 
-- [`ADR-0001` — ruflo-jujutsu plugin contract (ADR-compliance integration, smoke as contract)](./docs/adrs/0001-jujutsu-contract.md)
+- [`ADR-0001` â€” ruflo-jujutsu plugin contract (ADR-compliance integration, smoke as contract)](./docs/adrs/0001-jujutsu-contract.md)
 
 ## Related Plugins
 
-- `ruflo-adr` — `/adr check` consumes this plugin's `analyze_diff` output
-- `ruflo-agentdb` — namespace convention owner
+- `ruflo-adr` â€” `/adr check` consumes this plugin's `analyze_diff` output
+- `ruflo-agentdb` â€” namespace convention owner

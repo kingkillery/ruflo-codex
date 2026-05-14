@@ -66,11 +66,11 @@ migrations/
 
 ## Namespace coordination
 
-This plugin owns the `migrations` AgentDB namespace (kebab-case is implicit when the plugin name is the intent — same documented exception as `federation`). Follows the convention from [ruflo-agentdb ADR-0001 §"Namespace convention"](../ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
+This plugin owns the `migrations` AgentDB namespace (kebab-case is implicit when the plugin name is the intent â€” same documented exception as `federation`). Follows the convention from ruflo-agentdb namespace convention (original ruflo repo). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
 
 `migrations` is accessed via `memory_*` tools (namespace-routed). Tracks migration metadata, applied/pending status, and validation results.
 
-> **Routing note:** Earlier versions of these skills used `agentdb_hierarchical-*` and `agentdb_pattern-store` with namespace arguments — those tool families route by tier/ReasoningBank and ignore namespace strings. ADR-0001 fixed the skills to use `memory_*` for namespaced reads/writes.
+> **Routing note:** Earlier versions of these skills used `agentdb_hierarchical-*` and `agentdb_pattern-store` with namespace arguments â€” those tool families route by tier/ReasoningBank and ignore namespace strings. ADR-0001 fixed the skills to use `memory_*` for namespaced reads/writes.
 
 ## Verification
 
@@ -81,11 +81,11 @@ bash plugins/ruflo-migrations/scripts/smoke.sh
 
 ## Architecture Decisions
 
-- [`ADR-0001` — ruflo-migrations plugin contract (namespace-routing fix, smoke as contract)](./docs/adrs/0001-migrations-contract.md)
+- [`ADR-0001` â€” ruflo-migrations plugin contract (namespace-routing fix, smoke as contract)](./docs/adrs/0001-migrations-contract.md)
 
 ## Related Plugins
 
-- `ruflo-agentdb` — namespace convention owner; defines the routing rules ADR-0001 fixes a violation of
+- `ruflo-agentdb` â€” namespace convention owner; defines the routing rules ADR-0001 fixes a violation of
 - `ruflo-adr` -- Document schema change decisions as ADRs
 - `ruflo-ddd` -- Align migration boundaries with aggregate roots
 - `ruflo-observability` -- Track migration execution duration and failure rates

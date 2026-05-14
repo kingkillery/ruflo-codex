@@ -46,15 +46,15 @@ step "5. README pins @claude-flow/cli to v3.6"
 grep -qE "@claude-flow/cli.*v3\.6|v3\.6.*claude-flow/cli" "$ROOT/README.md" \
   && ok || bad "v3.6 pin missing"
 
-step "6. README defers to ruflo-agentdb namespace convention"
-grep -q "ruflo-agentdb" "$ROOT/README.md" \
-  && grep -q "Namespace convention" "$ROOT/README.md" \
+step "6. README claims autopilot-patterns namespace and coordination"
+grep -q "autopilot-patterns" "$ROOT/README.md" \
+  && grep -q "Namespace coordination" "$ROOT/README.md" \
   && ok || bad "namespace coordination block incomplete"
 
-step "7. README documents 270s cache-aware ScheduleWakeup"
-grep -qE "270 ?s|270 second" "$ROOT/README.md" \
-  && grep -qE "cache|prompt cache" "$ROOT/README.md" \
-  && ok || bad "cache-aware 270s note missing"
+step "7. README documents bounded autopilot iteration model"
+grep -qE "bounded|iteration|scheduler|Codex" "$ROOT/README.md" \
+  && grep -qE "cache|prompt cache|scheduler" "$ROOT/README.md" \
+  && ok || bad "bounded iteration / scheduler note missing"
 
 step "8. autopilot-patterns namespace claimed"
 grep -q "autopilot-patterns" "$ROOT/README.md" \

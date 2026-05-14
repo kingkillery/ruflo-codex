@@ -1,6 +1,6 @@
 ---
 id: ADR-0001
-title: ruflo-federation plugin contract — pinning, namespace coordination, 3-gate pattern alignment, ADR-097 budget integration, smoke as contract
+title: ruflo-federation plugin contract â€” pinning, namespace coordination, 3-gate pattern alignment, ADR-097 budget integration, smoke as contract
 status: Proposed
 date: 2026-05-04
 authors:
@@ -10,27 +10,27 @@ tags: [plugin, federation, zero-trust, peer-discovery, consensus, budget, namesp
 
 ## Context
 
-`ruflo-federation` (v0.2.0) — comms layer for cross-installation agent federation. Plugin-internal (drives `@claude-flow/plugin-agent-federation` via npx; no CLI MCP tools of its own — federation tooling is npm-package-driven). Surface:
+`ruflo-federation` (v0.2.0) â€” comms layer for cross-installation agent federation. Plugin-internal (drives `@claude-flow/plugin-agent-federation` via npx; no CLI MCP tools of its own â€” federation tooling is npm-package-driven). Surface:
 
 - 1 agent (`federation-coordinator`)
 - 3 skills (`federation-init`, `federation-status`, `federation-audit`)
 - 1 command (`/federation`)
-- README extensively documents the ADR-097 budget circuit breaker (Phase 1: send-side enforcement; Phase 2: peer state machine; Phase 3: ruflo-cost-tracker integration — both deferred)
+- README extensively documents the ADR-097 budget circuit breaker (Phase 1: send-side enforcement; Phase 2: peer state machine; Phase 3: ruflo-cost-tracker integration â€” both deferred)
 
 Contract gaps relative to the established cadence:
 
 1. No plugin-level ADR.
 2. No smoke test.
-3. README's "PII Pipeline" feature claim doesn't cross-reference the canonical [3-gate pattern owned by ruflo-aidefence ADR-0001](../../ruflo-aidefence/docs/adrs/0001-aidefence-contract.md). Federation's PII pipeline is a richer 14-type detection — but it's a specialization of the same 3-gate design and should defer to the canonical contract.
-4. No namespace coordination cross-reference (uses `federation` namespace — should be `federation-patterns` per kebab-case `<plugin-stem>-<intent>` rule, OR documented as the singular case where the plugin name itself is the intent).
+3. README's "PII Pipeline" feature claim doesn't cross-reference the canonical [3-gate pattern owned by ruflo-aidefence ADR-0001](../../ruflo-aidefence/docs/adrs/0001-aidefence-contract.md). Federation's PII pipeline is a richer 14-type detection â€” but it's a specialization of the same 3-gate design and should defer to the canonical contract.
+4. No namespace coordination cross-reference (uses `federation` namespace â€” should be `federation-patterns` per kebab-case `<plugin-stem>-<intent>` rule, OR documented as the singular case where the plugin name itself is the intent).
 5. Compatibility section missing the v3.6 pin.
 
 ## Decision
 
 1. Add this ADR (Proposed).
-2. README augment: Compatibility (pin v3.6); Namespace coordination (claim `federation` as the namespace — this is the documented exception where the plugin owns its base name; the kebab-case rule still applies, just with an empty intent. Cross-reference [ruflo-agentdb ADR-0001](../../ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md)); 3-gate alignment block (federation's PII pipeline is a richer specialization of the canonical 3 gates from ruflo-aidefence ADR-0001); Verification + Architecture Decisions sections.
+2. README augment: Compatibility (pin v3.6); Namespace coordination (claim `federation` as the namespace â€” this is the documented exception where the plugin owns its base name; the kebab-case rule still applies, just with an empty intent. Cross-reference ruflo-agentdb namespace convention (original ruflo repo)); 3-gate alignment block (federation's PII pipeline is a richer specialization of the canonical 3 gates from ruflo-aidefence ADR-0001); Verification + Architecture Decisions sections.
 3. Plugin metadata stays at `0.2.0` (already at the cadence). Keywords add `mcp`, `pii-pipeline`, `audit-log`.
-4. `scripts/smoke.sh` — 10 structural checks: version + new keywords; all 3 skills + agent + command with valid frontmatter; ADR-097 budget block intact (`maxHops`, `maxTokens`, `maxUsd`, `BUDGET_EXCEEDED`, `HOP_LIMIT_EXCEEDED`); 5-tier trust model documented (UNTRUSTED → VERIFIED → ATTESTED → TRUSTED → PRIVILEGED); compliance modes documented (HIPAA, SOC2, GDPR); v3.6 pin; namespace coordination block; 3-gate alignment cross-reference; ADR Proposed; no wildcard tools.
+4. `scripts/smoke.sh` â€” 10 structural checks: version + new keywords; all 3 skills + agent + command with valid frontmatter; ADR-097 budget block intact (`maxHops`, `maxTokens`, `maxUsd`, `BUDGET_EXCEEDED`, `HOP_LIMIT_EXCEEDED`); 5-tier trust model documented (UNTRUSTED â†’ VERIFIED â†’ ATTESTED â†’ TRUSTED â†’ PRIVILEGED); compliance modes documented (HIPAA, SOC2, GDPR); v3.6 pin; namespace coordination block; 3-gate alignment cross-reference; ADR Proposed; no wildcard tools.
 
 ## Consequences
 
@@ -49,7 +49,7 @@ bash plugins/ruflo-federation/scripts/smoke.sh
 
 ## Related
 
-- `plugins/ruflo-aidefence/docs/adrs/0001-aidefence-contract.md` — canonical 3-gate pattern this plugin specializes
-- `plugins/ruflo-cost-tracker/docs/adrs/0001-cost-tracker-contract.md` — ADR-097 Phase 3 integration target
-- `plugins/ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md` — namespace convention
-- `v3/docs/adr/ADR-097-federation-budget-circuit-breaker.md` — host-side enforcement reference
+- `plugins/ruflo-aidefence/docs/adrs/0001-aidefence-contract.md` â€” canonical 3-gate pattern this plugin specializes
+- `plugins/ruflo-cost-tracker/docs/adrs/0001-cost-tracker-contract.md` â€” ADR-097 Phase 3 integration target
+- `plugins/ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md` â€” namespace convention
+- `v3/docs/adr/ADR-097-federation-budget-circuit-breaker.md` â€” host-side enforcement reference

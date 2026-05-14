@@ -3,7 +3,7 @@ set -u
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PASS=0
 FAIL=0
-step() { printf "→ %s ... " "$1"; }
+step() { printf "â†’ %s ... " "$1"; }
 ok()   { printf "PASS\n"; PASS=$((PASS+1)); }
 bad()  { printf "FAIL: %s\n" "$1"; FAIL=$((FAIL+1)); }
 
@@ -41,9 +41,8 @@ step "4. README pins @claude-flow/cli to v3.6"
 grep -qE "@claude-flow/cli.*v3\.6|v3\.6.*claude-flow/cli" "$ROOT/README.md" \
   && ok || bad "v3.6 pin missing"
 
-step "5. README defers to ruflo-agentdb namespace convention"
-grep -q "ruflo-agentdb" "$ROOT/README.md" \
-  && grep -q "Namespace convention" "$ROOT/README.md" \
+step "5. README has namespace coordination section"
+  grep -q "Namespace coordination" "$ROOT/README.md" \
   && ok || bad "namespace coordination block incomplete"
 
 step "6. workflows-state namespace claimed"

@@ -1,6 +1,6 @@
 ---
 id: ADR-0001
-title: ruflo-testgen plugin contract — pinning, namespace coordination, testgaps-worker contract, smoke as contract
+title: ruflo-testgen plugin contract â€” pinning, namespace coordination, testgaps-worker contract, smoke as contract
 status: Accepted
 date: 2026-05-04
 updated: 2026-05-09
@@ -11,18 +11,18 @@ tags: [plugin, testgen, tdd, coverage, namespace, smoke-test]
 
 ## Context
 
-`ruflo-testgen` (v0.1.0) — test gap detection + TDD London School workflow + automated test generation. 1 agent (`tester`), 2 skills (`tdd-workflow`, `test-gaps`), 1 command (`/testgen`).
+`ruflo-testgen` (v0.1.0) â€” test gap detection + TDD London School workflow + automated test generation. 1 agent (`tester`), 2 skills (`tdd-workflow`, `test-gaps`), 1 command (`/testgen`).
 
-Drives the `testgaps` background worker (one of 12 documented in [ruflo-loop-workers ADR-0001](../../ruflo-loop-workers/docs/adrs/0001-loop-workers-contract.md)) via `hooks_worker-dispatch`. Also uses three coverage CLI commands: `hooks coverage-gaps`, `hooks coverage-route`, `hooks coverage-suggest`.
+Drives the `testgaps` background worker (one of 12 documented in ruflo-loop-workers (original ruflo repo)) via `hooks_worker-dispatch`. Also uses three coverage CLI commands: `hooks coverage-gaps`, `hooks coverage-route`, `hooks coverage-suggest`.
 
-This plugin is the canonical owner of the **Refinement phase** in the SPARC methodology per [ruflo-sparc ADR-0001](../../ruflo-sparc/docs/adrs/0001-sparc-contract.md) §"Phase-to-plugin alignment".
+This plugin is the canonical owner of the **Refinement phase** in the SPARC methodology per [ruflo-sparc ADR-0001](../../ruflo-sparc/docs/adrs/0001-sparc-contract.md) Â§"Phase-to-plugin alignment".
 
 ## Decision
 
 1. Add this ADR (Proposed).
 2. README augment: Compatibility (pin v3.6); testgaps worker + coverage CLI command surface; SPARC Refinement phase ownership cross-reference; Namespace coordination (claims `test-gaps`); Verification + Architecture Decisions sections.
-3. Bump `0.1.0 → 0.2.0`. Keywords add `mcp`, `tdd-london-school`, `coverage-routing`.
-4. `scripts/smoke.sh` — 10 structural checks: version + keywords; both skills + agent + command with valid frontmatter; `hooks_worker-dispatch` referenced; `testgaps` trigger documented; coverage CLI commands referenced; v3.6 pin; namespace coordination; SPARC Refinement cross-reference; ADR Proposed; no wildcard tools.
+3. Bump `0.1.0 â†’ 0.2.0`. Keywords add `mcp`, `tdd-london-school`, `coverage-routing`.
+4. `scripts/smoke.sh` â€” 10 structural checks: version + keywords; both skills + agent + command with valid frontmatter; `hooks_worker-dispatch` referenced; `testgaps` trigger documented; coverage CLI commands referenced; v3.6 pin; namespace coordination; SPARC Refinement cross-reference; ADR Proposed; no wildcard tools.
 
 ## Consequences
 
@@ -39,10 +39,10 @@ bash plugins/ruflo-testgen/scripts/smoke.sh
 
 ## Related
 
-- `plugins/ruflo-loop-workers/docs/adrs/0001-loop-workers-contract.md` — defines the `testgaps` worker
-- `plugins/ruflo-sparc/docs/adrs/0001-sparc-contract.md` — Refinement phase ownership
-- `plugins/ruflo-jujutsu/docs/adrs/0001-jujutsu-contract.md` — diff analysis for PR-time coverage gating
-- `plugins/ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md` — namespace convention
+- `plugins/ruflo-loop-workers/docs/adrs/0001-loop-workers-contract.md` â€” defines the `testgaps` worker
+- `plugins/ruflo-sparc/docs/adrs/0001-sparc-contract.md` â€” Refinement phase ownership
+- `plugins/ruflo-jujutsu/docs/adrs/0001-jujutsu-contract.md` â€” diff analysis for PR-time coverage gating
+- `plugins/ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md` â€” namespace convention
 
 ## Implementation status
 

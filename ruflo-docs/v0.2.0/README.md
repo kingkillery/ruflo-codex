@@ -49,7 +49,7 @@ mcp tool call hooks_worker-dispatch --json -- '{"trigger": "document", "scope": 
 
 ## Namespace coordination
 
-This plugin owns the `docs-drift` AgentDB namespace (kebab-case, follows the convention from [ruflo-agentdb ADR-0001 §"Namespace convention"](../ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md)). Used for drift-detection state (last-seen export hash per file). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
+This plugin owns the `docs-drift` AgentDB namespace (kebab-case, follows the convention from ruflo-agentdb namespace convention (original ruflo repo)). Used for drift-detection state (last-seen export hash per file). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
 
 `docs-drift` is accessed via `memory_*` tools (namespace-routed).
 
@@ -62,11 +62,11 @@ bash plugins/ruflo-docs/scripts/smoke.sh
 
 ## Architecture Decisions
 
-- [`ADR-0001` — ruflo-docs plugin contract (document-worker integration, namespace coordination, smoke as contract)](./docs/adrs/0001-docs-contract.md)
+- [`ADR-0001` â€” ruflo-docs plugin contract (document-worker integration, namespace coordination, smoke as contract)](./docs/adrs/0001-docs-contract.md)
 
 ## Related Plugins
 
-- `ruflo-agentdb` — namespace convention owner
-- `ruflo-loop-workers` — defines the `document` background worker
-- `ruflo-adr` — ADRs trigger doc generation when status changes
-- `ruflo-sparc` — Documenter mode (Phase 5 Refinement) consumes this plugin
+- `ruflo-agentdb` â€” namespace convention owner
+- `ruflo-loop-workers` â€” defines the `document` background worker
+- `ruflo-adr` â€” ADRs trigger doc generation when status changes
+- `ruflo-sparc` â€” Documenter mode (Phase 5 Refinement) consumes this plugin

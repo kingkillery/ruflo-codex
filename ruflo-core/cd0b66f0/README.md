@@ -52,13 +52,13 @@ This foundation plugin defers to seven sibling ADRs that own specific cross-cutt
 
 | Contract | Owner |
 |----------|-------|
-| **Pinning + smoke as contract** (general pattern) | [ruflo-ruvector ADR-0001](../ruflo-ruvector/docs/adrs/0001-pin-ruvector-0.2.25.md) |
-| **Namespace convention** (`<plugin-stem>-<intent>`, reserved namespaces) | [ruflo-agentdb ADR-0001](../ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md) |
+| **Namespace convention** (`<plugin-stem>-<intent>`, reserved namespaces) | Documented in each plugin's README; original convention in `ruflo-agentdb` (original ruflo repo) |
 | **Session-as-skill architecture** (RVF + trajectory + 3 AIDefence gates) | [ruflo-browser ADR-0001](../ruflo-browser/docs/adrs/0001-browser-skills-architecture.md) |
-| **4-step intelligence pipeline** (RETRIEVE → JUDGE → DISTILL → CONSOLIDATE) | [ruflo-intelligence ADR-0001](../ruflo-intelligence/docs/adrs/0001-intelligence-surface-completeness.md) |
 | **3-gate AIDefence pattern** (PII pre-storage, sanitization, prompt-injection) | [ruflo-aidefence ADR-0001](../ruflo-aidefence/docs/adrs/0001-aidefence-contract.md) |
 | **Bounded autopilot iteration + cache-warm guidance** | [ruflo-autopilot ADR-0001](../ruflo-autopilot/docs/adrs/0001-autopilot-contract.md) |
 | **ADR plugin contract** (token-optimization via REFERENCE.md) | [ruflo-adr ADR-0001](../ruflo-adr/docs/adrs/0001-adr-plugin-pattern.md) |
+| **Pinning + smoke as contract** (general pattern) | `ruflo-ruvector` (original ruflo repo) |
+| **4-step intelligence pipeline** | `ruflo-intelligence` (original ruflo repo) |
 
 ## Verification
 

@@ -66,9 +66,9 @@ Each SPARC phase has a canonical handoff plugin that owns its deeper tooling:
 
 | Phase | Owner | What it provides |
 |-------|-------|-----------------|
-| **Specification** | [ruflo-goals](../ruflo-goals/docs/adrs/0001-goals-contract.md) (deep-research) | Multi-source research orchestration to gather requirements |
+| **Specification** | ruflo-goals (original ruflo repo) (deep-research) | Multi-source research orchestration to gather requirements |
 | **Pseudocode** | `ruflo-sparc` (this plugin) | Pseudocode generation + complexity annotation |
-| **Architecture** | [ruflo-adr](../ruflo-adr/docs/adrs/0001-adr-plugin-pattern.md) + [ruflo-ddd](../ruflo-ddd/docs/adrs/0001-ddd-contract.md) | ADR creation + bounded-context modeling |
+| **Architecture** | [ruflo-adr](../ruflo-adr/docs/adrs/0001-adr-plugin-pattern.md) + ruflo-ddd (original ruflo repo) | ADR creation + bounded-context modeling |
 | **Refinement** | [ruflo-jujutsu](../ruflo-jujutsu/docs/adrs/0001-jujutsu-contract.md) + ruflo-testgen | Diff-aware refactor + test gap analysis |
 | **Completion** | [ruflo-docs](../ruflo-docs/docs/adrs/0001-docs-contract.md) | Auto-generated documentation |
 
@@ -76,7 +76,7 @@ This plugin orchestrates the lifecycle; sibling plugins do the deep work per pha
 
 ## Namespace coordination
 
-This plugin owns four AgentDB namespaces, all kebab-case compliant per [ruflo-agentdb ADR-0001 §"Namespace convention"](../ruflo-agentdb/docs/adrs/0001-agentdb-optimization.md):
+This plugin owns four AgentDB namespaces, all kebab-case compliant per ruflo-agentdb namespace convention (original ruflo repo):
 
 | Namespace | Purpose |
 |-----------|---------|
@@ -84,7 +84,7 @@ This plugin owns four AgentDB namespaces, all kebab-case compliant per [ruflo-ag
 | `sparc-phases` | Phase artifacts (specs, pseudocode, ADRs, reports) |
 | `sparc-gates` | Gate check results and history |
 
-The reserved `patterns` (plural) namespace is consumed for cross-feature SPARC pattern learning — note the pluralization (different from the singular `pattern` ReasoningBank target). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
+The reserved `patterns` (plural) namespace is consumed for cross-feature SPARC pattern learning Ã¢â‚¬â€ note the pluralization (different from the singular `pattern` ReasoningBank target). Reserved namespaces (`pattern`, `claude-memories`, `default`) MUST NOT be shadowed.
 
 ## Verification
 
@@ -95,12 +95,12 @@ bash plugins/ruflo-sparc/scripts/smoke.sh
 
 ## Architecture Decisions
 
-- [`ADR-0001` — ruflo-sparc plugin contract (phase-to-plugin alignment, namespace coordination, smoke as contract)](./docs/adrs/0001-sparc-contract.md)
+- [`ADR-0001` Ã¢â‚¬â€ ruflo-sparc plugin contract (phase-to-plugin alignment, namespace coordination, smoke as contract)](./docs/adrs/0001-sparc-contract.md)
 
 ## Related Plugins
 
-- `ruflo-agentdb` — namespace convention owner; backing store for sparc-state/-phases/-gates
-- `ruflo-goals` — Specification phase deep-research
+- `ruflo-agentdb` Ã¢â‚¬â€ namespace convention owner; backing store for sparc-state/-phases/-gates
+- `ruflo-goals` Ã¢â‚¬â€ Specification phase deep-research
 - `ruflo-adr` -- Architecture decisions recorded as ADRs in Phase 3
 - `ruflo-ddd` -- Architecture phase uses DDD bounded context patterns
 - `ruflo-jujutsu` -- Refinement phase diff analysis
